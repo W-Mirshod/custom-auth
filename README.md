@@ -611,8 +611,8 @@ python manage.py shell
 ```
 
 ```python
-from auth_system.models import User, Role, UserRole
-from auth_system.utils import hash_password
+from auth.models import User, Role, UserRole
+from auth.utils import hash_password
 
 # Create admin user
 admin_user = User.objects.create(
@@ -669,7 +669,7 @@ curl http://localhost:8000/api/products/ \
 ### Example 2: Assign Role to User
 
 ```python
-from auth_system.models import User, Role, UserRole
+from auth.models import User, Role, UserRole
 
 user = User.objects.get(email="john@example.com")
 user_role = Role.objects.get(name="user")

@@ -3,7 +3,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
-from auth_system.permissions import HasElementPermission
+from auth.permissions import HasElementPermission
 
 
 @method_decorator(csrf_exempt, name='dispatch')
@@ -42,7 +42,7 @@ class ProductsListView(APIView):
         
         # Filter based on permissions (if user has read_all, show all; otherwise show only own)
         if request.user and hasattr(request.user, 'id'):
-            from auth_system.models import UserRole, AccessRoleRule, BusinessElement, Role
+            from auth.models import UserRole, AccessRoleRule, BusinessElement, Role
             element = BusinessElement.objects.get(name='products')
             user_roles = UserRole.objects.filter(user=request.user).select_related('role')
             
@@ -98,7 +98,7 @@ class ShopsListView(APIView):
         
         # Filter based on permissions
         if request.user and hasattr(request.user, 'id'):
-            from auth_system.models import UserRole, AccessRoleRule, BusinessElement
+            from auth.models import UserRole, AccessRoleRule, BusinessElement
             element = BusinessElement.objects.get(name='shops')
             user_roles = UserRole.objects.filter(user=request.user).select_related('role')
             
@@ -156,7 +156,7 @@ class OrdersListView(APIView):
         
         # Filter based on permissions
         if request.user and hasattr(request.user, 'id'):
-            from auth_system.models import UserRole, AccessRoleRule, BusinessElement
+            from auth.models import UserRole, AccessRoleRule, BusinessElement
             element = BusinessElement.objects.get(name='orders')
             user_roles = UserRole.objects.filter(user=request.user).select_related('role')
             

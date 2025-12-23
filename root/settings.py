@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'auth_system',
+    'auth',
     'mock_business',
 ]
 
@@ -44,7 +44,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    'auth_system.middleware.SessionMiddleware',
+    'auth.middleware.SessionMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
@@ -86,7 +86,7 @@ DATABASES = {
 
 
 # Password validation
-# Using custom password validation in auth_system
+# Using custom password validation in auth
 
 # REST Framework configuration
 REST_FRAMEWORK = {

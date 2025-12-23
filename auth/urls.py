@@ -7,7 +7,7 @@ from .views import (
     DeleteAccountView
 )
 
-app_name = 'auth_system'
+app_name = 'auth'
 
 urlpatterns = [
     path('register/', UserRegistrationView.as_view(), name='register'),
