@@ -1,0 +1,284 @@
+[
+  {
+    "model": "auth_system.role",
+    "pk": 1,
+    "fields": {
+      "name": "admin",
+      "description": "Administrator with full access to all resources"
+    }
+  },
+  {
+    "model": "auth_system.role",
+    "pk": 2,
+    "fields": {
+      "name": "manager",
+      "description": "Manager with elevated permissions"
+    }
+  },
+  {
+    "model": "auth_system.role",
+    "pk": 3,
+    "fields": {
+      "name": "user",
+      "description": "Regular user with limited permissions"
+    }
+  },
+  {
+    "model": "auth_system.role",
+    "pk": 4,
+    "fields": {
+      "name": "guest",
+      "description": "Guest user with minimal permissions"
+    }
+  },
+  {
+    "model": "auth_system.businesselement",
+    "pk": 1,
+    "fields": {
+      "name": "users",
+      "description": "User management"
+    }
+  },
+  {
+    "model": "auth_system.businesselement",
+    "pk": 2,
+    "fields": {
+      "name": "products",
+      "description": "Product management"
+    }
+  },
+  {
+    "model": "auth_system.businesselement",
+    "pk": 3,
+    "fields": {
+      "name": "shops",
+      "description": "Shop management"
+    }
+  },
+  {
+    "model": "auth_system.businesselement",
+    "pk": 4,
+    "fields": {
+      "name": "orders",
+      "description": "Order management"
+    }
+  },
+  {
+    "model": "auth_system.businesselement",
+    "pk": 5,
+    "fields": {
+      "name": "access_rules",
+      "description": "Access rules management"
+    }
+  },
+  {
+    "model": "auth_system.accessrolerule",
+    "pk": 1,
+    "fields": {
+      "role": 1,
+      "element": 1,
+      "read_permission": true,
+      "read_all_permission": true,
+      "create_permission": true,
+      "update_permission": true,
+      "update_all_permission": true,
+      "delete_permission": true,
+      "delete_all_permission": true
+    }
+  },
+  {
+    "model": "auth_system.accessrolerule",
+    "pk": 2,
+    "fields": {
+      "role": 1,
+      "element": 2,
+      "read_permission": true,
+      "read_all_permission": true,
+      "create_permission": true,
+      "update_permission": true,
+      "update_all_permission": true,
+      "delete_permission": true,
+      "delete_all_permission": true
+    }
+  },
+  {
+    "model": "auth_system.accessrolerule",
+    "pk": 3,
+    "fields": {
+      "role": 1,
+      "element": 3,
+      "read_permission": true,
+      "read_all_permission": true,
+      "create_permission": true,
+      "update_permission": true,
+      "update_all_permission": true,
+      "delete_permission": true,
+      "delete_all_permission": true
+    }
+  },
+  {
+    "model": "auth_system.accessrolerule",
+    "pk": 4,
+    "fields": {
+      "role": 1,
+      "element": 4,
+      "read_permission": true,
+      "read_all_permission": true,
+      "create_permission": true,
+      "update_permission": true,
+      "update_all_permission": true,
+      "delete_permission": true,
+      "delete_all_permission": true
+    }
+  },
+  {
+    "model": "auth_system.accessrolerule",
+    "pk": 5,
+    "fields": {
+      "role": 1,
+      "element": 5,
+      "read_permission": true,
+      "read_all_permission": true,
+      "create_permission": true,
+      "update_permission": true,
+      "update_all_permission": true,
+      "delete_permission": true,
+      "delete_all_permission": true
+    }
+  },
+  {
+    "model": "auth_system.accessrolerule",
+    "pk": 6,
+    "fields": {
+      "role": 2,
+      "element": 2,
+      "read_permission": true,
+      "read_all_permission": true,
+      "create_permission": true,
+      "update_permission": true,
+      "update_all_permission": true,
+      "delete_permission": false,
+      "delete_all_permission": false
+    }
+  },
+  {
+    "model": "auth_system.accessrolerule",
+    "pk": 7,
+    "fields": {
+      "role": 2,
+      "element": 3,
+      "read_permission": true,
+      "read_all_permission": true,
+      "create_permission": true,
+      "update_permission": true,
+      "update_all_permission": true,
+      "delete_permission": false,
+      "delete_all_permission": false
+    }
+  },
+  {
+    "model": "auth_system.accessrolerule",
+    "pk": 8,
+    "fields": {
+      "role": 2,
+      "element": 4,
+      "read_permission": true,
+      "read_all_permission": true,
+      "create_permission": true,
+      "update_permission": true,
+      "update_all_permission": true,
+      "delete_permission": false,
+      "delete_all_permission": false
+    }
+  },
+  {
+    "model": "auth_system.accessrolerule",
+    "pk": 9,
+    "fields": {
+      "role": 3,
+      "element": 2,
+      "read_permission": true,
+      "read_all_permission": false,
+      "create_permission": true,
+      "update_permission": true,
+      "update_all_permission": false,
+      "delete_permission": true,
+      "delete_all_permission": false
+    }
+  },
+  {
+    "model": "auth_system.accessrolerule",
+    "pk": 10,
+    "fields": {
+      "role": 3,
+      "element": 3,
+      "read_permission": true,
+      "read_all_permission": false,
+      "create_permission": true,
+      "update_permission": true,
+      "update_all_permission": false,
+      "delete_permission": true,
+      "delete_all_permission": false
+    }
+  },
+  {
+    "model": "auth_system.accessrolerule",
+    "pk": 11,
+    "fields": {
+      "role": 3,
+      "element": 4,
+      "read_permission": true,
+      "read_all_permission": false,
+      "create_permission": true,
+      "update_permission": true,
+      "update_all_permission": false,
+      "delete_permission": true,
+      "delete_all_permission": false
+    }
+  },
+  {
+    "model": "auth_system.accessrolerule",
+    "pk": 12,
+    "fields": {
+      "role": 4,
+      "element": 2,
+      "read_permission": true,
+      "read_all_permission": false,
+      "create_permission": false,
+      "update_permission": false,
+      "update_all_permission": false,
+      "delete_permission": false,
+      "delete_all_permission": false
+    }
+  },
+  {
+    "model": "auth_system.accessrolerule",
+    "pk": 13,
+    "fields": {
+      "role": 4,
+      "element": 3,
+      "read_permission": true,
+      "read_all_permission": false,
+      "create_permission": false,
+      "update_permission": false,
+      "update_all_permission": false,
+      "delete_permission": false,
+      "delete_all_permission": false
+    }
+  },
+  {
+    "model": "auth_system.accessrolerule",
+    "pk": 14,
+    "fields": {
+      "role": 4,
+      "element": 4,
+      "read_permission": true,
+      "read_all_permission": false,
+      "create_permission": false,
+      "update_permission": false,
+      "update_all_permission": false,
+      "delete_permission": false,
+      "delete_all_permission": false
+    }
+  }
+]
