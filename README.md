@@ -550,6 +550,57 @@ Response: 200 OK
 - PostgreSQL 12+
 - pip
 
+### Quick Start with Docker (Recommended)
+
+The easiest way to run the application is using Docker Compose:
+
+```bash
+# Build and start containers
+docker-compose up --build
+
+# The API will be available at http://localhost:8000
+```
+
+This will:
+- Start a PostgreSQL database container
+- Build and start the Django application container
+- Run migrations automatically
+- Load initial fixtures (roles, business elements, access rules)
+
+To stop the containers:
+```bash
+docker-compose down
+```
+
+To view logs:
+```bash
+docker-compose logs -f web
+```
+
+To create an admin user (run in a separate terminal while containers are running):
+```bash
+docker-compose exec web python manage.py shell
+```
+
+Then in the shell:
+```python
+from auth.models import User, Role, UserRole
+from auth.utils import hash_password
+
+admin_user = User.objects.create(
+    first_name="Admin",
+    last_name="User",
+    email="admin@example.com",
+    password_hash=hash_password("admin123"),
+    is_active=True
+)
+
+admin_role = Role.objects.get(name="admin")
+UserRole.objects.create(user=admin_user, role=admin_role)
+```
+
+### Manual Installation
+
 ### Step 1: Clone and Setup Virtual Environment
 
 ```bash
@@ -569,7 +620,7 @@ CREATE USER postgres WITH PASSWORD 'postgres';
 GRANT ALL PRIVILEGES ON DATABASE custom_auth_db TO postgres;
 ```
 
-Update database settings in `config/settings.py` if needed:
+Update database settings in `root/settings.py` if needed:
 
 ```python
 DATABASES = {
