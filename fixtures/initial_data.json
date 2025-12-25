@@ -1,6 +1,6 @@
 [
   {
-    "model": "auth.role",
+    "model": "custom_auth.role",
     "pk": 1,
     "fields": {
       "name": "admin",
@@ -8,7 +8,7 @@
     }
   },
   {
-    "model": "auth.role",
+    "model": "custom_auth.role",
     "pk": 2,
     "fields": {
       "name": "manager",
@@ -16,7 +16,7 @@
     }
   },
   {
-    "model": "auth.role",
+    "model": "custom_auth.role",
     "pk": 3,
     "fields": {
       "name": "user",
@@ -24,7 +24,7 @@
     }
   },
   {
-    "model": "auth.role",
+    "model": "custom_auth.role",
     "pk": 4,
     "fields": {
       "name": "guest",
@@ -32,7 +32,7 @@
     }
   },
   {
-    "model": "auth.businesselement",
+    "model": "custom_auth.businesselement",
     "pk": 1,
     "fields": {
       "name": "users",
@@ -40,7 +40,7 @@
     }
   },
   {
-    "model": "auth.businesselement",
+    "model": "custom_auth.businesselement",
     "pk": 2,
     "fields": {
       "name": "products",
@@ -48,7 +48,7 @@
     }
   },
   {
-    "model": "auth.businesselement",
+    "model": "custom_auth.businesselement",
     "pk": 3,
     "fields": {
       "name": "shops",
@@ -56,7 +56,7 @@
     }
   },
   {
-    "model": "auth.businesselement",
+    "model": "custom_auth.businesselement",
     "pk": 4,
     "fields": {
       "name": "orders",
@@ -64,7 +64,7 @@
     }
   },
   {
-    "model": "auth.businesselement",
+    "model": "custom_auth.businesselement",
     "pk": 5,
     "fields": {
       "name": "access_rules",
@@ -72,7 +72,7 @@
     }
   },
   {
-    "model": "auth.accessrolerule",
+    "model": "custom_auth.accessrolerule",
     "pk": 1,
     "fields": {
       "role": 1,
@@ -87,7 +87,7 @@
     }
   },
   {
-    "model": "auth.accessrolerule",
+    "model": "custom_auth.accessrolerule",
     "pk": 2,
     "fields": {
       "role": 1,
@@ -102,7 +102,7 @@
     }
   },
   {
-    "model": "auth.accessrolerule",
+    "model": "custom_auth.accessrolerule",
     "pk": 3,
     "fields": {
       "role": 1,
@@ -117,7 +117,7 @@
     }
   },
   {
-    "model": "auth.accessrolerule",
+    "model": "custom_auth.accessrolerule",
     "pk": 4,
     "fields": {
       "role": 1,
@@ -132,7 +132,7 @@
     }
   },
   {
-    "model": "auth.accessrolerule",
+    "model": "custom_auth.accessrolerule",
     "pk": 5,
     "fields": {
       "role": 1,
@@ -147,7 +147,7 @@
     }
   },
   {
-    "model": "auth.accessrolerule",
+    "model": "custom_auth.accessrolerule",
     "pk": 6,
     "fields": {
       "role": 2,
@@ -162,7 +162,7 @@
     }
   },
   {
-    "model": "auth.accessrolerule",
+    "model": "custom_auth.accessrolerule",
     "pk": 7,
     "fields": {
       "role": 2,
@@ -177,7 +177,7 @@
     }
   },
   {
-    "model": "auth.accessrolerule",
+    "model": "custom_auth.accessrolerule",
     "pk": 8,
     "fields": {
       "role": 2,
@@ -192,7 +192,7 @@
     }
   },
   {
-    "model": "auth.accessrolerule",
+    "model": "custom_auth.accessrolerule",
     "pk": 9,
     "fields": {
       "role": 3,
@@ -207,7 +207,7 @@
     }
   },
   {
-    "model": "auth.accessrolerule",
+    "model": "custom_auth.accessrolerule",
     "pk": 10,
     "fields": {
       "role": 3,
@@ -222,7 +222,7 @@
     }
   },
   {
-    "model": "auth.accessrolerule",
+    "model": "custom_auth.accessrolerule",
     "pk": 11,
     "fields": {
       "role": 3,
@@ -237,7 +237,7 @@
     }
   },
   {
-    "model": "auth.accessrolerule",
+    "model": "custom_auth.accessrolerule",
     "pk": 12,
     "fields": {
       "role": 4,
@@ -252,7 +252,7 @@
     }
   },
   {
-    "model": "auth.accessrolerule",
+    "model": "custom_auth.accessrolerule",
     "pk": 13,
     "fields": {
       "role": 4,
@@ -267,7 +267,7 @@
     }
   },
   {
-    "model": "auth.accessrolerule",
+    "model": "custom_auth.accessrolerule",
     "pk": 14,
     "fields": {
       "role": 4,

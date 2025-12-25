@@ -37,12 +37,14 @@ def create_session(user: User) -> Session:
 def get_session_by_id(session_id: str) -> Session | None:
     """Get a session by session_id, checking if it's expired"""
     try:
-        session = Session.objects.get(session_id=session_id)
+        import uuid
+        session_uuid = uuid.UUID(session_id)
+        session = Session.objects.get(session_id=session_uuid)
         if session.is_expired():
             session.delete()
             return None
         return session
-    except Session.DoesNotExist:
+    except (Session.DoesNotExist, ValueError, TypeError):
         return None
 
 

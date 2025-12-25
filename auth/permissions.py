@@ -15,8 +15,9 @@ class HasElementPermission(permissions.BasePermission):
     
     def has_permission(self, request, view):
         """Check if user has permission for the requested action"""
+        from django.contrib.auth.models import AnonymousUser
         # Check if user is authenticated
-        if not request.user or not hasattr(request.user, 'id'):
+        if not request.user or isinstance(request.user, AnonymousUser) or not hasattr(request.user, 'id'):
             raise AuthenticationFailed('Authentication required')
         
         # Get element name from view

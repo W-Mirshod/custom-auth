@@ -115,7 +115,8 @@ class ProfileView(APIView):
     
     def get(self, request):
         """Get current user profile"""
-        if not request.user or not hasattr(request.user, 'id'):
+        from django.contrib.auth.models import AnonymousUser
+        if not request.user or isinstance(request.user, AnonymousUser) or not hasattr(request.user, 'id'):
             return Response({'error': 'Authentication required'}, status=status.HTTP_401_UNAUTHORIZED)
         
         serializer = UserSerializer(request.user)
@@ -123,7 +124,8 @@ class ProfileView(APIView):
     
     def patch(self, request):
         """Update current user profile"""
-        if not request.user or not hasattr(request.user, 'id'):
+        from django.contrib.auth.models import AnonymousUser
+        if not request.user or isinstance(request.user, AnonymousUser) or not hasattr(request.user, 'id'):
             return Response({'error': 'Authentication required'}, status=status.HTTP_401_UNAUTHORIZED)
         
         serializer = UserUpdateSerializer(request.user, data=request.data, partial=True)
